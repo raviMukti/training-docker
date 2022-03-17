@@ -16,7 +16,7 @@ Client:
   scan: Docker Scan (Docker Inc., v0.17.0)
 ```
 4. Arsitektur Docker
-![Arsitektur-Docker]()
+![Arsitektur-Docker](https://github.com/raviMukti/training-docker/blob/master/image/docker-architecture.png)
 5. Beberapa contoh Container Registry
     5.1 [Docker Hub](https://hub.docker.com/) - Freemium
     5.2 [Google Container Registry](https://cloud.google.com/container-registry) - Premium
