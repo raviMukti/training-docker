@@ -1,0 +1,32 @@
+version: '3.3'
+
+services:
+  mongo:
+    container_name: mongo
+    image: mongo
+    ports:
+      - 27017:27017
+    networks:
+      - golang_network
+  redis:
+    container_name: redis
+    image: redis
+    ports:
+      - 6379:6379
+    networks:
+      - golang_network
+  app-golang:
+    container_name: app-golang
+    image: app-golang:1.0
+    ports:
+      - 8080:8080
+    environment:
+      - DATABASE_NAME=production
+      - DATABASE_USER=production
+      - DATABASE_PASSWORD=production
+    networks:
+      - golang_network
+
+networks:
+  golang_network:
+    name: golang_network
