@@ -18,9 +18,9 @@ Client:
 4. Arsitektur Docker
 ![Arsitektur-Docker](https://github.com/raviMukti/training-docker/blob/master/image/docker-architecture.png)
 5. Beberapa contoh Container Registry
-    5.1 [Docker Hub](https://hub.docker.com/) - Freemium
-    5.2 [Google Container Registry](https://cloud.google.com/container-registry) - Premium
-    5.3 [AWS Elastic Container Registry](https://aws.amazon.com/id/ecr/) - Premium
+    - [Docker Hub](https://hub.docker.com/) - Freemium
+    - [Google Container Registry](https://cloud.google.com/container-registry) - Premium
+    - [AWS Elastic Container Registry](https://aws.amazon.com/id/ecr/) - Premium
 6. Images adalah bundle dari aplikasi kita
 7. Container adalah image yang di running (instance dari images)
 8. Command melihat daftar images yang ada di komputer kita
@@ -58,14 +58,14 @@ Successfully built eff83595cac5
 Successfully tagged app-golang:1.0
 ```
 18. Mengupload image ke container registry
-    18.1 Buka Docker Hub
-    18.2 Buat repository baru
-    18.3 Buat tag baru
+    - Buka Docker Hub
+    - Buat repository baru
+    - Buat tag baru
     `docker tag app-golang:1.0 ravimukti/app-golang:1.0`
-    18.4 Login ke registry
+    - Login ke registry
     `docker login`
-    18.5 Masukan user and password Docker Hub
-    18.6 Push ke docker container registry
+    - Masukan user and password Docker Hub
+    - Push ke docker container registry
     `docker push ravimukti/app-golang:1.0`
 19. Menggunakan environment variable di docker bisa menggunakan parameter e pada saat membuat container
 `docker container create --name app-golang1 -p 8080:8080 -e DATABASE_NAME=production -e DATABASE_USER=production -e DATABASE_PASSWORD=production app-golang:1.0`
